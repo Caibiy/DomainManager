@@ -41,7 +41,7 @@ router.post('/register',function(req,res){
 router.post('/authenticate',function(req,res){
     const username=req.body.name;
     const password= req.body.password;
-    if(!username&&password){
+    if(!username||!password){
         return res.json({success:false,msg:"请输入帐号密码!"});
     }
     User.getUserByName(username,function(err,user){
