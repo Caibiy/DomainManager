@@ -32,7 +32,7 @@ export class NewDomainComponent implements OnInit {
         this.domainService.addDomain(domain).subscribe(data=>{
             if(data.success){
                 this.flashMessageService.show(data.msg,{cssClass:"alert-success",timeout:2000});
-               
+               this.router.navigate(['/domains',this.id]);
             }else{
                 this.flashMessageService.show(data.msg,{cssClass:"alert-danger",timeout:2000});
             }

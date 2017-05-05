@@ -77,7 +77,6 @@ router.post('/authenticate',function(req,res){
 
 //得到个人信息
 router.get('/profile',passport.authenticate('jwt',{session:false}),function(req,res){
-    console.log("user"+req.user);
     res.json({user:req.user});
 })
 

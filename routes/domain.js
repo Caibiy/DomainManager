@@ -40,6 +40,7 @@ router.post('/new',function(req,res){
         tip:tip,
         u_id:id
     });
+
     const newCate=new Cate({
         u_id:id,
         name:cateName
@@ -47,6 +48,7 @@ router.post('/new',function(req,res){
     Domain.getDomainByName(name,(err,domain)=>{
         if(err)
             throw err;
+        
         if(domain){
             return res.json({success:false,msg:"该书签已经存在了"});
         }else{

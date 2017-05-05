@@ -1,3 +1,7 @@
+		.mcontainer{
+			width:960px;
+			margin:0 auto;
+		}
 		form{
 			width:960px;
 			text-align: center;
@@ -23,10 +27,11 @@
 		}
 		form input.mbtn{
 			margin-top:30px;
-			padding:9px 24px;
+			padding:9px 60px;
 			border-radius: 8px;
 			background: #4CAF50;
 			border:none;
 			font-size: 14px;
 			color:#fff;
 		}
+	

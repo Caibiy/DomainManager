@@ -85891,6 +85891,7 @@ var NewDomainComponent = (function () {
         this.domainService.addDomain(domain).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessageService.show(data.msg, { cssClass: "alert-success", timeout: 2000 });
+                _this.router.navigate(['/domains', _this.id]);
             }
             else {
                 _this.flashMessageService.show(data.msg, { cssClass: "alert-danger", timeout: 2000 });
