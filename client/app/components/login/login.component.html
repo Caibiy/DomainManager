@@ -1,0 +1,12 @@
+
+<div class="login-page">
+  <div class="form">
+    <div class="form-head">Login</div>
+    <form class="login-form" (submit)="onLogin($event)">
+      <input type="text"  [(ngModel)]="name" name="name" placeholder="username"/>
+      <input type="password"  [(ngModel)]="password" name="password"  placeholder="password"/>
+      <button type="submit">登录</button>
+      <p class="message">没有注册? <a [routerLink]="['/signup']">创建一个账号</a></p>
+    </form>
+  </div>
+</div>

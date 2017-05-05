@@ -1,0 +1,22 @@
+		<div class="container">
+			<form (submit)="onNewSubmit($event)">
+				<div class="form-header">New BookMark</div>
+				<div class="my-group">
+					<label for="name">名字:</label>
+					<input type="text"  [(ngModel)]="name" name="name" placeholder="百度官网">
+				</div>
+				<div class="my-group">
+					<label for="url">Url地址:</label>
+					<input type="text"  [(ngModel)]="url" name="url" placeholder="http://www.baidu.com">
+				</div>
+				<div class="my-group">
+					<label for="tip">简介:</label>
+					<input type="text"  [(ngModel)]="tip" name="tip" placeholder="百度首页">
+				</div>
+				<div class="my-group">
+					<label for="cate">分类:</label>
+					<input type="text" [(ngModel)]="cate" name="cate" placeholder="tech,life">
+				</div>
+				 <input type="submit" class="mbtn" value="提交">
+			</form>
+		</div>

@@ -1,0 +1,32 @@
+		form{
+			width:960px;
+			text-align: center;
+		}
+		.form-header{
+			font-size: 36px;
+			color:#999;
+			margin-bottom:30px;
+		}
+		.my-group{
+			position: relative;
+			margin-top:15px;
+		}
+		.my-group label{
+				position: absolute;
+				left: 330px;
+				top:10px;
+		}
+		.my-group input{
+			padding:10px;
+			border-radius: 8px;
+			border:none;
+		}
+		form input.mbtn{
+			margin-top:30px;
+			padding:9px 24px;
+			border-radius: 8px;
+			background: #4CAF50;
+			border:none;
+			font-size: 14px;
+			color:#fff;
+		}

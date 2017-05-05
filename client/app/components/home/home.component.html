@@ -1,0 +1,69 @@
+<!--<div class="jumbotron text-center">
+  <h1>DomainManager</h1>
+  <p class="lead">简易书签管理系统</p>
+  <div>
+    <a class="btn btn-success " [routerLink]="['/signup']">Sign up</a> <a class="btn btn-info" [routerLink]="['/login']">Login</a>
+  </div>
+</div>-->
+<header id="banner" class="hero-unit">
+    <div class="container">
+      <div *ngIf="!authService.loggedIn()">
+        <h1>DomainManager</h1>
+        <p class="lead">书签管理系统</p>
+        <a [routerLink]="['/signup']"> <button class="btn btn-lg btn-info mainbutton">注册</button></a>
+      </div>
+      <div *ngIf="authService.loggedIn()">
+        <h1>Welcome to back</h1>
+        <p class="lead">欢迎回来</p>
+        <a [routerLink]="['/dashboard']"> <button class="btn btn-lg btn-success mainbutton">个人面板</button></a>
+      </div>
+    </div>
+</header>
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+    <h3>简单</h3>
+    <p>您可以很快速的上手的书签管理系统</p>
+  </div>
+  <div class="col-md-4">
+    <h3>安全</h3>
+    <p>使用JWT验证方式,保护您的个人信息</p>
+  </div>
+  <div class="col-md-4">
+    <h3>分享</h3>
+    <p>你可以把你喜欢的书签分享给朋友</p>
+  </div>
+</div>
+</div>
+<!--
+<div class="container" style="text-align:center">
+
+<table border="0" cellspacing="0" cellpadding="0" style="position:relative;display:inline-block;margin-top:80px;border-top: 2px solid #eefbf0; border-left: 2px solid #eefbf0; border-right: 2px solid #eefbf0;">
+  <ul>
+    <li class="active"><a href="#">常用网址</a></li>
+    <li><a href="#">科技网址</a></li>
+    <li><a href="#">生活网址</a></li>
+    <li><a href="#">联系反馈</a></li>
+  </ul>
+  <div class="border"></div>
+   <tbody style="text-align:initial">
+    <tr>
+     <td style="border-bottom: 2px solid #eefbf0; border-right: 2px solid #eefbf0; width: 80px; padding: 5px; text-align: center; background-color: #229944; color: #F6F6F6;">招聘</td>
+     <td style="border-bottom: 2px solid #eefbf0; padding: 5px;" class="td"><a href="http://www.51job.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(18,1)"><img src="Material/icon/3AA47A42-0A98-4E3E-B0DA-119185F046B9.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />前程无忧</a><a href="http://www.zhaopin.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(19,1)"><img src="Material/icon/9F11E660-53C1-4956-96E0-D31AF0F9DD26.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />智联招聘</a><a href="http://www.chinahr.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(20,1)"><img src="Material/icon/DD04C3B0-3F56-4E6F-BC4F-3655C4E9E389.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />中华英才网</a><a href="http://www.liepin.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(21,1)">猎聘网</a><a href="http://www.o-hr.cn/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(22,1)"><img src="Material/icon/B352F4BC-6B94-4D56-AF06-B188A5CA7BCF.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />圆才网</a><a href="http://www.crewcn.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(119,1)"><img src="Material/icon/EE635BBD-5D71-4AFB-895F-F8B85E42EB17.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />中国船员招聘网</a><a href="http://www.csi.com.cn/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(120,1)">航运信息网</a></td>
+    </tr>
+    <tr>
+     <td style="border-bottom: 2px solid #eefbf0; border-right: 2px solid #eefbf0; width: 80px; padding: 5px; text-align: center; background-color: #229944; color: #F6F6F6;">银行</td>
+     <td style="border-bottom: 2px solid #eefbf0; padding: 5px;" class="td"><a href="http://www.boc.cn/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(162,1)">中国银行</a><a href="http://www.icbc.com.cn/icbc/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(163,1)">工行</a><a href="http://www.ccb.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(164,1)">建行</a><a href="http://www.abchina.com/cn/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(165,1)">农行</a><a href="http://bank.ecitic.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(166,1)">中信银行</a><a href="http://www.psbc.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(167,1)">邮政储蓄</a><a href="http://www.spdb.com.cn/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(168,1)">浦发</a><a href="http://www.cmbchina.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(169,1)">招行</a><a href="http://www.bankcomm.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(170,1)">交通银行</a></td>
+    </tr>
+    <tr>
+     <td style="border-bottom: 2px solid #eefbf0; border-right: 2px solid #eefbf0; width: 80px; padding: 5px; text-align: center; background-color: #229944; color: #F6F6F6;">旅游</td>
+     <td style="border-bottom: 2px solid #eefbf0; padding: 5px;" class="td"><a href="http://www.ly.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(24,1)"><img src="Material/icon/734E7700-FEB1-4365-89CE-745BFCD5594F.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />同程旅游</a><a href="http://www.tuniu.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(25,1)"><img src="Material/icon/A3B7B43C-4464-4F09-A58B-52279D72AF94.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />途牛旅游网</a><a href="http://www.elong.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(26,1)"><img src="Material/icon/F9289358-9B96-488A-9245-5D52782A4597.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />艺龙</a><a href="http://www.qunar.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(27,1)"><img src="Material/icon/CB0FF964-2A5F-42F9-91EF-A11F0E862040.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />去哪儿网</a><a href="http://www.ctrip.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(91,1)"><img src="Material/icon/DAE5F44D-DEA5-412B-AF4C-835E417C896C.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />携程</a></td>
+    </tr>
+    <tr>
+     <td style="border-bottom: 2px solid #eefbf0; border-right: 2px solid #eefbf0; width: 80px; padding: 5px; text-align: center; background-color: #229944; color: #F6F6F6;">游戏</td>
+     <td style="border-bottom: 2px solid #eefbf0; padding: 5px;" class="td"><a href="http://www.sdo.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(130,1)"><img src="Material/icon/EE0CDAEB-8AF2-4BF4-8864-538069B7ECD3.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />盛大游戏</a><a href="http://game.163.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(131,1)"><img src="Material/icon/77C6A29A-E871-463D-9BD7-D828D1196079.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />网易游戏</a><a href="http://game.qq.com/index.shtml" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(132,1)">腾讯游戏</a><a href="http://www.the9.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(133,1)">第九城市</a><a href="http://youxi.baidu.com/index.html" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(134,1)">百度游戏</a><a href="http://game.skycn.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(135,1)">悠洋游戏</a><a href="http://www.4399.com/" target="_blank" style="padding: 8px; display: inline-table;" onclick="ClickNum(145,1)"><img src="Material/icon/36C7F972-FA20-4A7D-904E-AA91C2880238.ico" style="width: 18px; height: 18px; margin-bottom:-4px; margin-right: 4px; " />4399小游戏</a></td>
+    </tr> 
+   </tbody>
+  </table>
+ 
+  </div>-->

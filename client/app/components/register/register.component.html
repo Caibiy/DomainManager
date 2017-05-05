@@ -1,0 +1,14 @@
+
+
+<div class="register-page">
+  <div class="form">
+    <div class="form-head">Register</div>
+    <form class="login-form" (submit)="onRegisterSubmit($event)">
+      <input type="text"  [(ngModel)]="name" name="name" placeholder="username"/>
+      <input type="password"  [(ngModel)]="password" name="password"  placeholder="password"/>
+       <input type="password"  [(ngModel)]="email" name="email"  placeholder="email"/>
+      <button type="submit">注册</button>
+      <p class="message">已经注册? <a [routerLink]="['/login']">登录</a></p>
+    </form>
+  </div>
+</div>

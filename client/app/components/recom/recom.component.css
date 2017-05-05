@@ -1,0 +1,142 @@
+.header {
+  height: 65px;
+  border-bottom: 1px solid #404553;
+  background-color: #393D49;
+  color: #fff;
+}
+.header .logo {
+  position: absolute;
+  left: 0;
+  font-family: 'Itim', cursive;
+  font-size: 48px;
+  top: -5px;
+  cursor: pointer;
+}
+.header .logo label {
+  font-size: 24px;
+  cursor: inherit;
+}
+.header .info {
+  position: absolute;
+  left: 200px;
+  font-family: 'Itim', cursive;
+  font-size: 24px;
+  bottom: 0;
+}
+.header .layui-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  background: none;
+}
+.header .layui-nav .layui-nav-item {
+  margin: 0 20;
+  line-height: 60px;
+}
+.header .layui-nav .layui-nav-item a {
+  display: block;
+  padding: 0 20px;
+}
+.layui-main {
+  width: 90%;
+  margin: 0 5%;
+}
+.admin-info {
+  text-align: center;
+  color: #FF5722;
+  padding: 10px 0;
+  box-shadow: 0 0 1em #d2d2d2;
+  border-radius: 6px;
+}
+.admin-info .domain-name {
+  font-family: 'Itim', cursive;
+  font-size: 16px;
+  color: #9d9d9d;
+  margin-left: 8px;
+}
+.admin-info .domain-label {
+  font-family: 'Itim', cursive;
+  font-size: 12px;
+  color: #9d9d9d;
+  margin-right:8px;
+}
+.box {
+  width: 80%;
+  margin: 0 10%;
+}
+.box .item-box {
+  position: relative;
+}
+.box .item-box .item-1 {
+  padding: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  width: 40%;
+  box-shadow: 0 0 1em #d2d2d2;
+}
+.box .item-box .item-1 a {
+  display: block;
+  margin-top: 18px;
+  text-align: left;
+  position: relative;
+}
+.box .item-box .item-1 a i {
+  position: absolute;
+  right: 20px;
+}
+.box .item-box .item-1 a.develop-color {
+  color: #FF5722;
+}
+.box .item-box .item-1 a:first-child {
+  margin-top: 0;
+}
+.box .item-box .item-2 {
+  padding: 10px;
+  top: 20px;
+  position: absolute;
+  right: 0;
+  width: 40%;
+  box-shadow: 0 0 1em #d2d2d2;
+}
+.box .item-box .item-2 a {
+  display: block;
+  margin-top: 18px;
+  text-align: left;
+  position: relative;
+}
+.box .item-box .item-2 a i {
+  position: absolute;
+  right: 20px;
+}
+.box .item-box .item-2 a:first-child {
+  margin-top: 0;
+}
+
+
+/** 图标字体 **/
+@font-face {font-family: 'layui-icon';
+  src: url('app/components/recom/font/iconfont.eot');
+  src: url('app/components/recom/font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('app/components/recom/font/iconfont.woff') format('woff'),
+  url('app/components/recom/font/iconfont.ttf') format('truetype'),
+  url('app/components/recom/font/iconfont.svg#iconfont') format('svg');
+}
+                    
+.layui-icon{
+  font-family:"layui-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/** 初始化全局标签 **/
+body{line-height: 24px; font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;}
+hr{height: 1px; margin: 10px 0; border: 0; background-color: #e2e2e2; clear: both;}
+a{color: #333; text-decoration:none; }
+a:hover{color: #777;}
+a cite{font-style: normal; *cursor:pointer;}
+
+
+
+

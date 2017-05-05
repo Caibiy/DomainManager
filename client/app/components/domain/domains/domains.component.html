@@ -1,0 +1,58 @@
+<!--<div *ngIf="domains">
+  <h2 class="page-header">您创建过的个人书签</h2>
+	<div class="mcontainer">
+  <div *ngFor="let domain of domains">
+		<div class="item">
+      	<div class="domain-box">
+		<img class="item-img" src="https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=50&h=50" alt="default-img">
+		<div class="domain-name">
+      {{domain.name}}
+		</div>
+		<div class="domain-tip">
+			{{domain.tip}}
+		</div>
+		<div class="domain-cate">
+		<i class="fa fa-th" aria-hidden="true"></i>
+			{{domain.cate}}
+		</div>
+	</div>
+  </div>
+	</div>
+	  </div>
+</div>-->
+
+	<!--
+	 <div class="box">
+    <div class="item-box">
+   		<div class="site-item item-1">	
+   		       <a  target="_blank" href="http://www.instructables.com/id/USB-Color-Changing-LED-Tree/">一个类似树的Led灯<i class="fa fa-cogs" aria-hidden="true"></i></a>
+             <a target="_blank" href="https://deskthority.net/videos-f63/keyboard-kit-assembly-instruction-video-t14862.html">键盘Gh60组件组装完成教程<i class="layui-icon" style="color:#5FB878;">&#xe60c;</i></a>
+             <a target="_blank" href="http://www.instructables.com/id/How-to-turn-your-computer-s-LCD-screen-transparent/step2/Principal-photography/">让你电脑的LCD屏幕变透明<i class="layui-icon" style="color:#1E9FFF;">&#xe60c;</i></a>
+             <a target="_blank" href="http://www.instructables.com/id/Magic-Keyboard-Light-Installation/">超级酷炫的魔法键盘教程<i class="layui-icon" style="color:#F7B824;">&#xe60c;</i></a>
+         </div>
+         <div class="site-item item-2">
+              <a target="_blank" href="http://www.instructables.com/id/How-to-Make-a-Magic-Mirror/">基于树莓派服务器的魔性镜子 <i class="layui-icon" style="color:#FF5722;">&#xe60c;</i> </a>
+              <a target="_blank" href="http://www.52nlp.cn/">我爱自然语言处理<i class="layui-icon" style="color:#FF5722;">&#xe60c;</i></a>
+         </div>
+    </div>
+   </div>-->
+	<div class="box">
+<div *ngFor="let cate of cates;let i =index" >
+			 <div class="item-box" >
+				 	<div class="site-item" [class.item-1]="isSpec(i)" [class.item-2]="!isSpec(i)">
+						 <div class="cate-header"><span class="constant">Category:</span><span class="name">{{cate.name}}</span></div>
+						<div *ngFor="let domain of generateArray(cate.domains)">
+							 <a target="_blank" href="{{domain.url}}">{{domain.tip}} <i class="fa fa-cogs" aria-hidden="true"></i> </a>
+						</div>
+					 </div>
+			 </div>
+		 </div>
+		
+	</div>
+  <!--
+  <ul class="list-group">
+    <li class="list-group-item">名字: {{domain.name}}</li>
+    <li class="list-group-item">地址: {{domain.url}}</li> 
+    <li class="list-group-item">简介: {{domain.tip}}</li> 
+    <li class="list-group-item">分类: {{domain.cate}}</li> 
+  </ul>-->

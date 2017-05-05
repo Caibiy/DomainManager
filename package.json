@@ -1,0 +1,23 @@
+{
+  "name": "DomianManager",
+  "version": "1.0.0",
+  "description": "mean stack application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "nodemailer": "^4.0.1",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}
